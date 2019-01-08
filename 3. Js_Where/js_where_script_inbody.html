@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>바디안에다 테스트</title>
+</head>
+<body>
+    <h1>웹 페이지</h1>
+    <p id = "demo">A Paragraph</p>
+    <button type="button" onclick="myFunction()">버튼클릭!!</button>
+    
+    <script>
+    function myFunction(){
+        <!-- 데모라는 p테그의 내용을 받아서 버튼을 누르면 그 곳의 위치에 숨겨진 내용이 출력되는것이다.--!>
+        document.getElementById("demo").innerHTML = "여기에 내용이 숨겨져 있었다.!!!";
+    }
+    </script>
+</body>
+</html>
