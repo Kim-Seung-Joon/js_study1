@@ -1,0 +1,25 @@
+<<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>var 및 주석</title>
+</head>
+<body>
+        <h2>변수 및 주석 사용 방법</h2>
+        <p id = var></p>
+        <p id = comment></p>
+        
+        <script>
+    
+        var x,y;
+            x = 5+6;
+            y = x*10;
+            //x1 = 5; 이런식으로 주석처리가 되면 실제로는 사용이 안된다는 말씀
+            //html은 <!-- !-->이런식으로 주석처리
+            document.getElementById("var").innerHTML = 
+                y;
+            document.getElementById("comment").innerHTML =
+                x;
+        </script>
+</body>
+</html>
