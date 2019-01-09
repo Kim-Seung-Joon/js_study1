@@ -1,0 +1,28 @@
+<<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>문자열</title>
+</head>
+<body>
+    
+    
+    <p id ="stringadd"></p>
+    <p id = "stringnumadd"></p>
+    
+    <script>
+    
+    var txt1 = "What a very";
+        txt1 += " nice day";
+        document.getElementById("stringadd").innerHTML =
+            txt1;
+        
+        var x = 5+5;
+        var y = "5"+5;
+        var z = "Hello"+5;
+        
+        document.getElementById("stringnumadd").innerHTML =
+            x+"<br>"+y+"<br>"+z;
+    </script>
+</body>
+</html>
