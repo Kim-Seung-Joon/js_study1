@@ -1,0 +1,27 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>산술연산 방법</title>
+</head>
+<body>
+    <p>위치에 따라 다른 결과값이 나온다.</p>
+    <p id = "num1"></p>
+    <p id = "num2"></p>
+    
+    <script>
+        //이렇게 선언하면 당연히 결과는 11이 나온다.
+        //var x = 5+2+3;
+        
+        // 둘다 5(문자열)5(숫자연산결과)가 나올 것이라고 생각되지만
+        // 문자열로 취급되는 5가 앞에 있으면 뒤에 있는 연산은 실행되지 않고 그냥 23으로 출력됨(문자열 취급)
+        var x1 = "5"+2+3;
+        var x2 = 2+3+"5";
+        
+        document.getElementById("num1").innerHTML =
+            x1;
+        document.getElementById("num2").innerHTML =
+            x2;
+    </script>
+</body>
+</html>

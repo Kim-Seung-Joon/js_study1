@@ -1,0 +1,24 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>변수 선언의 다양한 방법</title>
+</head>
+<body>
+        <p>
+            변수를 이용하는 방법은 여러가지가 있다.
+        </p>
+        <p id = var></p>
+        
+        <script>
+    
+            //이런식으로 var를 붙이지 않고 선언해도 결과값은 원하는 결과를 받을 수 있다.
+            var person = "김승준";
+            carName = "볼보";
+            price = 200;
+            //만약 이런식으로 var carname; 선언만 하게 되면 정의(할당)이 안되어 있기 때문에 언디파인드가 출력
+            document.getElementById("var").innerHTML =
+                carName
+        </script>
+</body>
+</html>

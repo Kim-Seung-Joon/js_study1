@@ -1,0 +1,25 @@
+<<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Variable</title>
+</head>
+<body>
+    <p>x,y,z로 변수를 설정할 때</p>
+    <p id = varxyz></p>
+    <p>price1, price2의 합 total을 보려고 할 때</p>
+    <p id = price></p>
+    
+    <script>
+    
+    var x =5, y =6;
+    var z = x+y;
+    document.getElementById("varxyz").innerHTML =
+        z;
+    var price1 = 5, price2 = 6;
+        var total = price1+price2;
+        document.getElementById("price").innerHTML = 
+            total;
+    </script>
+</body>
+</html>
