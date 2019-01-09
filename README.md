@@ -1,3 +1,1 @@
-# js_study
-# js_study
-# js_study1
+# Js_study file Uploaded since 2019.01.05
