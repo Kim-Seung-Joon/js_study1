@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>함수 선언 방법</title>
+</head>
+<body>
+
+    <h2>함수를 선언하는 예시</h2>
+    <p id ="fnc_define"></p>
+    <p id ="to_cel"></p>
+    <p id = "car1"></p>
+    <p id = "car2"></p>
+
+    <script>
+    
+    // 인수 2개를 받아서 그 2개의 곱을 반환하는 함수가 있다고 가정
+
+    var x = myFunction(3,4);
+  
+    function myFunction (a ,b) {
+       return a*b;
+    }
+
+    // 섭씨에서 화씨로 바꾸는 함수를 선언하자
+    // 화씨 77도를 섭씨(C)로 바꾸는 과정
+  
+    var Cel = toCelsius(77); 
+
+    function toCelsius(fahrenheit) {
+      return (5/9) * (fahrenheit-32);
+    } 
+
+    myCar();
+    
+    //함수안에 선언된 변수는 지역변수이기 때문에 외부에서 호출하면 undefined;
+
+    function myCar() {
+      var carName = "Kia";
+      document.getElementById("car1").innerHTML =
+      typeof carName + " "+ carName;
+  }
+
+    document.getElementById("car2").innerHTML = 
+    typeof carName;
+
+    document.getElementById("fnc_define").innerHTML = 
+    "myFunction 호출의 결과 = "+x;
+
+    document.getElementById("to_cel").innerHTML = 
+    "화씨77도를 섭씨로 바꾼 결과는 = "+Cel;
+   
+  </script>
+</body>
+</html>
