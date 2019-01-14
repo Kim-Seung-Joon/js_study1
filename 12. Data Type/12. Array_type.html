@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>배열부터</title>
+</head>
+<body>
+  <p id = "ar"></p>
+  <p id = "object"></p>
+  <p id = "type"></p>
+  <script>
+
+    var cars = ["hyundai","kia","audi"];
+    
+    //undefined
+    // car2 = ""; 선언이 되어있으면 string취급
+    
+    var car2;
+
+    //object 선언방법....
+    
+    var person = {
+      firstName : "승준",
+      lastName : "김",
+      age : 27
+    };
+
+        document.getElementById("ar").innerHTML = 
+        cars+"<br>"+"타입지정을 안한경우 : "+car2;
+   
+        document.getElementById("object").innerHTML = 
+        "제 이름과 나이는"+"&nbsp"+person.lastName+person.firstName+"&nbsp"+person.age+"입니다.";
+   
+        document.getElementById("type").innerHTML = 
+        typeof person.age+"<br>"+
+        typeof person.lastName;
+  
+        
+  
+  </script>
+</body>
+</html>

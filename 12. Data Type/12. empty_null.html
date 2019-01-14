@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>undefine && null</title>
+</head>
+<body>
+
+  <p id = "empty"></p>
+  <p id = "null"></p>
+  <p id = "undefine"></p>
+  <script>
+
+    var car = "";
+    document.getElementById("empty").innerHTML = 
+    "not undefine : "+typeof car;
+
+    var person = {
+      lastName : "김",
+      firstName : "승준",
+      age : 27
+    };
+
+    //여기서 null을 한다고 해서 null이 아니라 object취급
+    // undefined로 선언하면 언디파인드가 나옴
+
+    var person = null;
+
+    document.getElementById("null").innerHTML = 
+    typeof person; 
+
+    //null과 undefine은 엄밀히 말하면 아예 다른거
+    // 그래서 js에서는 ==로 비교하면 true고
+    // ===로 비교해야 우리가 일반적으로 쓰는 언어에서의 비교
+    
+    document.getElementById("undefine").innerHTML = 
+    typeof null+"<br>"+
+    typeof undefined+ "<br><br>"+
+    (null == undefined) + "<br>"+ 
+    (null === undefined);
+    
+
+  </script>
+</body>
+</html>

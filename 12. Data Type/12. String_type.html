@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id = "string"></p>
+    <p id = "num"></p>
+    <p id = "boolean"></p>
+    <script>
+
+        //문자열은 그대로 출력
+
+        var carName1 = "Hyundai";
+        var carName2 = "Kia";
+
+        // 숫자는 int double 상관없이? 
+
+        var num1 = 50;
+        var num2 = 50.00;
+        var num3 = 50e5;
+
+        // 부울형은 그대로
+
+        var p = 5;
+        var q = 4;
+        
+        document.getElementById("string").innerHTML =
+            carName1+"<br>"+
+            carName2;
+
+        document.getElementById("num").innerHTML =
+            num1+"<br>"+num2+"<br>"+num3;
+        
+        document.getElementById("boolean").innerHTML =
+            (p==q)? true:false;
+    </script>
+</body>
+</html>
