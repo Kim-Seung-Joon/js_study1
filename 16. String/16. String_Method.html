@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+  
+  /*
+    
+    string method의 종류 
+    length = 스트링의 길이
+    indexOf = 그 문자의 인덱스번호
+
+    search 서로 다름 indexof 
+    slice = 해당하는 인덱스로부터 자를 수 있음.
+  */
+
+  var str1 = "Hello world";
+  document.write(str1.length,"<br><br>");
+  document.write(str1.indexOf("world"),"<br><br>");
+  
+
+  var str2 = "he is a man";
+  document.write(str2.search("man"),"<br><br>");
+  document.write(str2.slice(0,2),"<br><br>");
+  document.write(str1.slice(5),"<br><br>");
+
+  /*
+    
+    slice와 substring,substr도 다름
+    slice
+
+  */
+
+  var str3 = "그는 사람이 맞습니다.";
+  //마이너스를 인덱스로 받으면 슬라이스는 마지막 인덱스로부터 뒤에서부터 짜른다.
+
+  document.write(str3.slice(3,-5),"<br><br>");
+  //substr은 시작되는 인덱스로부터 그 갯수만큼 자르는 거고
+
+  document.write(str3.substr(3,5),"<br><br>");
+  
+  //substring은 시작되는 인덱스부터 끝나는 인덱스까지만 출력하는 것이다 
+
+  document.write(str3.substring(3,6),"<br><br>");
+
+
+  //replace
+
+  var str4 = "real real";
+  document.write(str4.replace("real","class"),"<br><br>"); 
+  
+  //concat(결합)
+
+  var str5 = "Hello";
+  var str6 = "World";
+
+  document.write(str5.concat(" ",str6),"<br><br>");
+  document.write("Hello".concat(" ","World"));
+
+  //trim("쓸데없는 여백 제거")
+  
+  var str7 = "      Hello It`s Me         ";
+  alert(str7.trim());
+
+    
+  </script>
+</body>
+</html>
