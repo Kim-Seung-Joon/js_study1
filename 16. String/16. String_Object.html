@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+
+
+    // x는 object 취급
+    // y는 String 취급  즉, ==은 자바스크립트에서 같은 표현
+    // ===이 원래 쓰던 방법
+    
+    var x = "김승준";
+    var y = new String("김승준");
+
+    // 단순히 내용만을 비교 
+    
+    document.write(x==y,"<br><br>");
+    
+    // 자료형까지 비교
+
+    document.write(x===y,"<br><br>");
+
+
+    // String obect의 변수안의 내용이 같더라도 선언된 변수가 다르기 때문에 false다.
+
+    var x1 = new String("김승준");
+    var x2 = new String("김승준");
+
+    document.write(x1==x2,"<br><br>");
+    document.write(x1===x2,"<br><br>"); 
+    
+
+  </script>
+</body>
+</html>
