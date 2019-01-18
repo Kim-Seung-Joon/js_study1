@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+  
+  // 문자열 표현
+
+  var x = 123;
+  x.toString();
+  
+  // 지수적 표현 
+
+  var x1 = 9.656;
+  x.toExponential(4);
+  
+  // 할당된 수만큼 소수점 자리수 출력
+  // 만약 표현이 안되면 반올림
+
+  var x2 = 9.656;
+  x.toFixed(0);
+  x.toFixed(2);
+
+  var y1 = new Number(10);
+  document.write(y1,"<br><br>");
+
+  //Number(new Date());를 하면 1970년 1월 1일 기준으로 얼마가 
+  //지나간 것 인지 출력
+
+  var y2 = new Number(new Date("2019-01-18"));
+  document.write(y2,"<br><br>");
+
+  var y3 = "15";
+  document.write(parseInt(y3),"<br><br>");
+  document.write(typeof y3,"<br><br>");
+
+  </script>
+</body>
+</html>
