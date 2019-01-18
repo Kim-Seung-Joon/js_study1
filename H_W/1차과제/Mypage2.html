@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>계산기</title>
+<script language="javascript">
+
+     var all = "";//모든함수에서쓸수있는전역변수
+     var flag = false;
+     function add(num) {
+       all = all + num;
+       document.getElementById("display").value = all;
+     }
+     function sum() {
+       document.getElementById("display").value = eval(all);
+     }
+     function clearDisplay() {
+       all = "";
+       document.getElementById("display").value = "";
+     }
+     function abs(num) {
+       //all +=num;
+       sum();
+       document.getElementById("display").value = document.getElementById("display").value * -1;
+     }
+     function pow(all){
+       all.value = Math.pow(all.value,2);
+     }
+     function sqrt(all) {
+       all.value = Math.sqrt(all.value);
+     }
+     function backSpace() {
+       all = document.getElementById("display").value;
+       alllength = all.length;
+       all = all.substring(0,alllength - 1);
+       document.getElementById("display").value = all;
+     }
+     function log(all) {
+       all = parseFloat(all.value);
+       all.value = Math.log10(all.value);
+     }
+
+</script>
+<h1 align="center">자바스크립트 계산기</h1>
+</head>
+<body>
+
+    <style>
+        .buttons{
+          background-color:gainsboro;
+          border: 1;
+          color:black;
+          text-align: center;
+          width:50px;
+          height:50px;
+          font-size: 20px;
+          margin: 1px;
+        }
+      </style>
+
+
+<form>
+    <table align="center">
+
+        <tr>
+    
+          <td align="center"><input type="text" id="display" size="50" value="0"></td>
+        </tr>
+        <tr>
+          <td align="center">
+            <input type="button" value="%" name = "%" class ="buttons" onclick="add('%')">
+            <input type="button" value="√" name = "√" class ="buttons" onclick="sqrt(this.form.display)">
+            <input type="button" value="^" class ="buttons" onclick="pow(this.form.display)">
+            <input type="button" value="log" name = "log" class ="buttons" onclick="log(this.form.display)">
+          </td>
+        </tr>
+    
+        <tr>
+            <td align="center">
+              <input type="button" value="CE" name = "CE" class ="buttons" onclick="CE()">
+              <input type="button" value="C" name = "C" class ="buttons" onclick="clearDisplay()">
+              <input type="button" value="←" name = "←" class ="buttons" onclick="backSpace()">
+              <input type="button" value="+" name = "+" class ="buttons" onclick="add('+')">
+            </td>
+          </tr>
+    
+          <tr>
+              <td align="center">
+                <input type="button" value="7" class ="buttons" onclick="add('7')">
+                <input type="button" value="8" class ="buttons" onclick="add('8')">
+                <input type="button" value="9" class ="buttons" onclick ="add('9')">
+                <input type="button" value="-" class ="buttons" onclick="add('-')">
+              </td>
+            </tr>
+    
+            <tr>
+                <td align="center">
+                  <input type="button" value="4"  class ="buttons" onclick="add('4')">
+                  <input type="button" value="5"  class ="buttons" onclick="add('5')">
+                  <input type="button" value="6"  class ="buttons" onclick="add('6')">
+                  <input type="button" value="*"  class ="buttons" onclick="add('*')">
+                </td>
+            </tr>
+    
+            <tr>
+                <td align="center">
+                  <input type="button" value="1"  class ="buttons" onclick="add('1')">
+                  <input type="button" value="2"  class ="buttons" onclick="add('2')">
+                  <input type="button" value="3"  class ="buttons" onclick="add('3')">
+                  <input type="button" value="/" name = "/" class ="buttons" onclick="add('/')">
+                </td>
+            </tr>
+    
+            <tr>
+                <td align="center">
+                  <input type="button" value="±" name = "±" class ="buttons" onclick="abs(this.form.display)">
+                  <input type="button" value="0"  class ="buttons" onclick="add('0')">
+                  <input type="button" value="." name = "." class ="buttons">
+                  <input type="button" value="=" class ="buttons" onclick="sum()">
+                </td>
+            </tr>
+    
+    
+      </table>
+</form>
+</body>
+</html>

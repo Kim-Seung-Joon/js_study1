@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Document</title>
+  <meta charset=UTF-8">
+
+<script type="text/javascript">
+  
+  var text = "";
+  var text1 = "";
+
+  function input(num) {
+     document.getElementById("disp").value += num;
+
+  }
+
+  function Clear() {
+    document.getElementById("disp").value = "";
+  }
+
+  function Answer() {
+    document.getElementById("disp").value = eval(text);
+  }
+
+  function backSpace() {
+    text = document.getElementById("disp").value;
+    textlength = text.length;
+    text = text.substring(0,textlength - 1);
+    document.getElementById("disp").value = text;
+  }
+
+  function Sqrt(num) {
+    num = document.getElementById("disp");
+    a = parseFloat(num.value);
+
+    text = Math.sqrt(aa);
+  }
+
+  function Pow (text) {
+
+  }
+
+  function CE () {
+    document.getElementById("disp").value = "";
+  }
+
+
+</script>
+
+</head>
+<body>
+  <style>
+    .buttons{
+      background-color:gainsboro;
+      border: 1;
+      color:black;
+      text-align: center;
+      width:50px;
+      height:50px;
+      font-size: 20px;
+      margin: 1px;
+    }
+  </style>
+     
+<form>
+
+  <h1 align="center">자바스크립트 계산기</h1>
+  <table align="center">
+
+    <tr>
+
+      <td align="center"><input type="text" id="disp" width="96%" height="20pt"></td>
+    
+    </tr>
+
+    <tr>
+      <td align="center">
+        <input type="button" value="%" name = "%" class ="buttons" onclick="input('%')">
+        <input type="button" value="√" name = "√" class ="buttons" onclick="Sqrt(this.form.disp)">
+        <input type="button" value="^" class ="buttons" onclick="pow(this.form.disp)">
+        <input type="button" value="log" name = "log" class ="buttons">
+      </td>
+    </tr>
+
+    <tr>
+        <td align="center">
+          <input type="button" value="CE" name = "CE" class ="buttons" onclick="CE()">
+          <input type="button" value="C" name = "C" class ="buttons" onclick="Clear()">
+          <input type="button" value="←" name = "←" class ="buttons" onclick="backSpace()">
+          <input type="button" value="+" name = "+" class ="buttons" onclick="input('+')">
+        </td>
+      </tr>
+
+      <tr>
+          <td align="center">
+            <input type="button" value="7" class ="buttons" onclick="input('7')">
+            <input type="button" value="8" class ="buttons" onclick="input('8')">
+            <input type="button" value="9" class ="buttons" onclick="input('9')">
+            <input type="button" value="-" class ="buttons" onclick="input('-')">
+          </td>
+        </tr>
+
+        <tr>
+            <td align="center">
+              <input type="button" value="4"  class ="buttons" onclick="input('4')">
+              <input type="button" value="5"  class ="buttons" onclick="input('5')">
+              <input type="button" value="6"  class ="buttons" onclick="input('6')">
+              <input type="button" value="*"  class ="buttons" onclick="input('*')">
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center">
+              <input type="button" value="1"  class ="buttons" onclick="input('1')">
+              <input type="button" value="2"  class ="buttons" onclick="input('2')">
+              <input type="button" value="3"  class ="buttons" onclick="input('3')">
+              <input type="button" value="/" name = "/" class ="buttons" onclick="input('/')">
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center">
+              <input type="button" value="±" name = "±" class ="buttons">
+              <input type="button" value="0"  class ="buttons" onclick="input('0')">
+              <input type="button" value="." name = "." class ="buttons">
+              <input type="button" value="=" class ="buttons" onclick="Answer()">
+            </td>
+        </tr>
+
+
+  </table>
+</form>
+</body>
+</html>
