@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+  
+  var txt = "";
+  var numbers = [45,4,5,16,25];
+  
+  // forEach
+
+  numbers.forEach(myFunction);
+  document.write(txt+"<br><br>");
+
+  function myFunction(value,index,array) {
+    txt = txt+value+"<br>";
+  }
+
+  // Map
+
+  var number1 = [1,2,3,4,5];
+  var number2 = number1.map(mapFunction);
+  document.write(number2+"<br><br>");
+
+  function mapFunction (value) {
+    return value * 2;
+  }
+
+  // filter
+
+  var number3 = [2,4,50,47,35];
+  var number31 = number3.filter(filterFunction);
+  document.write(number31,"<br><br>");
+  function filterFunction(value) {
+    return value>20;
+  }
+
+  // reduce
+
+  var number4 = [45,4,9,16,25];
+  var sum = number4.reduce(reduceFunction); 
+  document.write(sum,"<br><br>");
+
+  function reduceFunction(total,value,index,array) {
+    return total+value;
+  }
+  
+  // every
+
+  var number5 = [10,11,12,13,14];
+  var allOver10 = number5.every(everyFunction);
+  document.write(allOver10,"<br><br>");
+
+  function everyFunction (value,index,array) {
+    return value>=10;  
+  }
+
+  // some
+  // every는 모두 해당, some는 일부 해당
+
+  var someOver10 = number5.some(someFunction);
+  document.write(someOver10,"<br><br>");
+
+
+  // indexof
+  var find10 = number5.indexOf(10);
+  
+  // 0 이면 true 값이 존재한다
+  // -1이면 false 값이 없다.
+
+  document.write(find10,"<br><br>");
+
+  function someFunction(value, index, array) {
+    return value >=10;
+  }
+
+  // find(index)
+  // findIndex를 하면 거기에 해당하는 처음 인덱스를 반환
+  
+  var findOver12 = number5.findIndex(findIndexFunction);
+  document.write(findOver12,"<br><br>");
+
+  function findIndexFunction(value, index, array) {
+    return value > 12;
+  }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+  
+  /*
+  
+    배열의 여러가지 매소드
+
+
+  */
+
+
+  var fruits = ["Banana","Orange","Apple","Mango"];
+  document.write(fruits.toString(),"<br><br>");
+
+  // join
+
+  document.write(fruits.join(" * "),"<br><br>");
+  
+  // LIFO구조이므로 가장 마지막에 들어있던 망고가 팝 되면 날라가고
+
+  fruits.pop();
+  document.write(fruits.toString(),"<br><br>");
+
+  // 푸쉬는 가장 뒤에 있던거 뒤에 들어감
+
+  fruits.push("Whaffle");
+  document.write(fruits.toString(),"<br><br>");
+
+  // shift, unshift()
+
+  
+  // shift() 가장 앞에 있는 내용이 날라감
+
+  var cars = ["현대","기아","르노"];
+  document.write("현재 배열에 있는 값: "+cars.toString(),"<br><br>");
+  cars.shift();
+  document.write(cars.toString(),"<br><br>");
+
+  // unshift()
+  // 가장 마지막에 들어 가는게 아니라 가장 앞에 들어간다 !!
+
+  cars.unshift("쌍용");
+  document.write(cars.toString(),"<br><br>");
+
+  /* splice
+
+   splice(n);으로 선언되면,
+   그 값부터 배열을 시작해라!!
+
+   추가 할 때는 splice(n,m," ", " ");
+   n번째 위치에 m개의 값을 추가해라, 추가하는 값은 뒤에 있다.
+
+   삭제 할 때는 splice(n,m);으로 하면 된다.  
+
+  */
+
+  var cities = ["서울","대전","대구","부산"];
+  document.write(cities.toString(),"<br><br>");
+  
+  
+  </script>
+</body>
+</html>

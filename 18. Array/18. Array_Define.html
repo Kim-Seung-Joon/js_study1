@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <p id ="for1"></p>
+  <p id = "for2"></p>
+
+  <script>
+  
+  /*
+    배열 선언의 2가지 방법
+    1. [] 에 넣어서 선언하기
+    2. new Array() 키워드 사용하기
+
+  */
+
+
+  var car =["현대","기아","르노"];
+  var car2 = new Array("현대","기아","르노");
+
+  document.write(car,"<br><br>");
+  document.write(car2,"<br><br>");
+
+  document.write(car.length,"<br><br>");
+  document.write(car2.sort(),"<br><br>");
+
+  /*
+    
+    for문 : 일반적, for_each
+  
+  */
+
+
+    // for1
+
+    var fruits,text,fLen;
+    fruits = ["Banana","Orange","Apple","Mango"];
+    fLen = fruits.length;
+
+    text = "<ul>";
+
+    for(var i = 0; i <fLen; i++){
+      text += "<li>"+fruits[i]+"</li>";
+    }
+
+    text += "</ul>";
+
+    document.getElementById("for1").innerHTML = 
+    text;
+
+    // for2(for each)
+
+    text = "<ul>";
+    fruits.forEach(myFunction);
+    text +="</ul>";
+
+    function myFunction(value) {
+      text += "<li>"+value+"</li>";
+    }
+
+    document.getElementById("for2").innerHTML =
+    text;
+  
+  </script>
+</body>
+</html>

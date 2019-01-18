@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+  
+    var korea = ["가","나","마","라"];
+    document.write(korea.sort(),"<br><br>");
+    document.write(korea.reverse(),"<br><br>");
+
+    var score =["100","70","15","90"];
+    score.sort(function(a,b) { return a-b;});
+    document.write(score,"<br><br>");
+    score.sort(function(a,b){return b-a});
+    document.write(score,"<br><br>"); 
+    score.sort(function(a,b){return 0.5 - Math.random()});
+    document.write(score,"<br><br>");
+
+
+    // Math.max(), Math.min();
+
+
+    var B_POINTS = ["20","10","43","57"];
+
+    function myArrayMax (arr) {
+      return Math.max.apply(null,arr);
+    }
+
+    function myArrayMin(arr) {
+      return Math.min.apply(null,arr);
+    }
+
+    document.write(myArrayMax(B_POINTS),"<br><br>");
+    document.write(myArrayMin(B_POINTS),"<br><br>");
+
+    // object sorting
+
+    var KoreaCar = [{type:"현대",year: 2004},{type:"기아",year:2011},{type:"르노",year:2014}];
+    KoreaCar.sort(function (a,b) { return a.year- b.year});
+    document.write(KoreaCar[0].type+ " "+KoreaCar[0].year+"<br>"+
+    KoreaCar[1].type+ " "+KoreaCar[1].year+"<br>"+
+    KoreaCar[2].type+ " "+KoreaCar[2].year+"<br>");
+  </script>
+</body>
+</html>
