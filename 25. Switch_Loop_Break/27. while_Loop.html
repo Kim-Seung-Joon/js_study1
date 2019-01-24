@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+  <p id = "demo"></p>
+  <p id = "demo1"></p>
+
+  <script>
+  
+  var i =0;
+  text ="";
+
+  var j = 0;
+  text1 = "";
+
+  while(i<10){
+    text+= "The number is " +i+"<br><br>";
+    i++;
+  }
+
+  do{
+    text1 += "The number is "+j+"<br><br>";
+    j++;
+  }while(j<10);
+
+
+  document.getElementById("demo").innerHTML = text;
+  document.getElementById("demo1").innerHTML = text1;
+  </script>
+</body>
+</html>
